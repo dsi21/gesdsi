@@ -1,0 +1,64 @@
+{# app/Resources/views/layout.html.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{% block title %}DSI{% endblock %}</title>
+{% block stylesheets %}
+<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}"
+type="text/css" />
+{% endblock %}
+</head>
+
+<body>
+    <div class="container">
+        
+        <div id="header" class="hero-unit">
+            <center><h1>Plateforme GESDSI21</h1></center>
+            <marquee><p><h3><small>les NTICs, une réalité au Mali</small></h3></p> </marquee>
+            {# <p><a class="btn btn-primary btn-large" href=""> Lire le tutoriel » </a></p>#}
+{#            <p><a class="btn btn-primary" href="{{ path('accueil') }}">Accueil&nbsp;» </a></p>#}
+        </div>
+        
+        <div class="row">
+            
+            <div id="menu" class="span3">
+                <h3>Projets</h3>
+                <p><a class="btn btn-primary" href="">»&nbsp; Nouveau </a></p>
+                <p><a class="btn btn-primary" href="">»&nbsp; Gestion Projet</a></p>
+                <p><a class="btn btn-primary" href="">»&nbsp; Financement Projet </a></p> </br>
+            </div>
+            
+                 
+               {# <ul class="nav nav-pills ">#}
+               {# {{ render(controller("DSIMainBundle:Membre:menu", {'nombre': 3})) }}#}
+            
+            
+            <div id="content" class="span6">
+                {% block body %}
+                {% endblock body%}
+            </div>
+            
+            <div id="menu" class="span3">
+                <h3>Ressources</h3>
+                <p><a class="btn btn-primary" href="">»&nbsp; Membres DSI </a></p>
+                 <p><a class="btn btn-primary" href="">»&nbsp; Partenaires </a></p>
+                <p><a class="btn btn-primary" href="">»&nbsp; Cotisation </a></p> 
+            </div>
+            
+        </div>
+        
+        <hr>
+        <footer><center> <p>DSI © 2015 - tout droit réservé.</p> </center> </footer>
+        
+    </div>
+    {% block javascripts %}
+        {# Ajoutez ces lignes JavaScript si vous comptez vous servir des
+        fonctionnalités du bootstrap Twitter #}
+        <script
+        src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap.js')
+        }}"></script>
+    {% endblock %}
+</body>
+</html>

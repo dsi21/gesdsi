@@ -1,0 +1,4 @@
+dsi_main:
+    resource: "@DSIMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
