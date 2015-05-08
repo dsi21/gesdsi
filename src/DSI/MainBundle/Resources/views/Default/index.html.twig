@@ -1,0 +1,19 @@
+{% extends "DSIMainBundle::layout.html.twig" %}
+
+{% block title %} Accueil - {{ parent() }} {% endblock title%}
+
+{% block dsi_body %}
+    <h2>Hello page d'accueil! vue 3ème niveau</h2>
+   {# <ul>
+        {% for article in articles %}
+        <li>
+        <a href="{{ path('sdzblog_voir', {'id': article.id}) }}">{{
+        article.titre }}</a>
+        par {{ article.auteur }},
+        le {{ article.date|date('d/m/Y') }}
+        </li>
+        {% else %}
+        <li>Pas (encore !) d'articles</li>
+        {% endfor %}
+    </ul>#}
+{% endblock dsi_body%}

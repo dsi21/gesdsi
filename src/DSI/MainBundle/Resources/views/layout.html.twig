@@ -1,0 +1,11 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}Dsi - {{ parent() }} {% endblock title%}
+{% block body %}
+    
+    <h4>Bienvenue sur l'application de gestion de Dsi21</h4>
+    <hr>
+    
+    {% block dsi_body %} {% endblock %}
+    
+{% endblock body%}
